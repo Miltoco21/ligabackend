@@ -3,7 +3,7 @@ import { getUsers,registro } from "../controllers/registro.controller.js";
 
 const router = Router();
 
-router.get("/registro", getUsers);
+router.get("/api/registro", getUsers);
 router.post("/registro", registro);
 
 
