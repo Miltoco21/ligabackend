@@ -18,11 +18,11 @@ app.use(function(req, res, next) {
 
 
 
-app.use('/api/',rutaEmpleados)
-app.use('/api/',rutaIndex)
-app.use('/api/',rutaRegistro)
-app.use('/api/',rutaLogin)
-app.use('/api/',rutaUsuarios)
+app.use('/',rutaEmpleados)
+app.use('/',rutaIndex)
+app.use('/',rutaRegistro)
+app.use('/',rutaLogin)
+app.use('/',rutaUsuarios)
 
 app.use((req,res,next )=>{
   res.status(404).json({
