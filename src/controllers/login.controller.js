@@ -1,3 +1,7 @@
+import { pool } from "../db.js";
+import bcrypt from 'bcrypt'
+
+
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;

@@ -4,6 +4,7 @@ import rutaIndex from '../src/routes/index.routes.js'
 import rutaRegistro from '../src/routes/registro.routes.js'
 import rutaLogin from '../src/routes/login.routes.js'
 import rutaUsuarios from '../src/routes/usuarios.routes.js'
+import rutaHome from "../src/routes/home.routes.js"
 import cors from "cors"
 
 
@@ -19,6 +20,7 @@ app.use(function(req, res, next) {
 
 
 app.use('/',rutaEmpleados)
+app.use('/',rutaHome)
 app.use('/',rutaIndex)
 app.use('/',rutaRegistro)
 app.use('/',rutaLogin)

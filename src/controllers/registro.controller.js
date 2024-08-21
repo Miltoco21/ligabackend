@@ -16,13 +16,14 @@ export const registro = async (req, res) => {
 
     const [rows] = await pool.query(
       "INSERT INTO usuario( nombre,apellido,email,password ) VALUES(?,?,?,?)",
-      [nombre, apellido, email, password]
+      [nombre, apellido, email, hash]
     );
     res.status(200).json({
       message: "Guardado con exito ",
     });
   } catch (error) {
-    
+    console.error("Error during registration:", error);
+
     return res.status(500).json({
       message: "Algo salio mal ",
     });
