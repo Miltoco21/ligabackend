@@ -1,52 +1,4 @@
 -- Active: 1724694582988@@ben5ld9pxvoeo3lkstud-mysql.services.clever-cloud.com@3306@ben5ld9pxvoeo3lkstud
- CREATE DATABASE IF NOT EXISTS companydb;
- use company;
- CREATE TABLE empleados (
-   id INT(11)NOT NULL AUTO_INCREMENT,
-   nombre VARCHAR(255)DEFAULT NULL,
-   salario INT(10)DEFAULT NULL,
-   PRIMARY KEY(id)
- );
-
- INSERT INTO empleados VALUES
-(1,'Milton',50),
-(2,'Alonso',50),
-(3,'Judith',50),
-(4,'Luis',50)
-
-CREATE DATABASE IF NOT EXISTS POS;
-use POS;
-
-CREATE TABLE usuario (
-   id INT(11)NOT NULL AUTO_INCREMENT,
-   nombre VARCHAR(255)DEFAULT NULL,
-   apellido VARCHAR(255)DEFAULT NULL,
-   email VARCHAR(255)DEFAULT NULL,
-   password VARCHAR(255)DEFAULT NULL,
-   password2 VARCHAR(255)DEFAULT NULL,
-   
-   
-   PRIMARY KEY(id)
- );
-
-CREATE TABLE usuarios (
-   id INT(11)NOT NULL AUTO_INCREMENT,
-   nombres VARCHAR(255)DEFAULT NULL,
-   apellidos VARCHAR(255)DEFAULT NULL,
-   email VARCHAR(255)DEFAULT NULL,
-   direccion VARCHAR(255)DEFAULT NULL,
-   telefono VARCHAR(255)DEFAULT NULL,
-   comuna VARCHAR(255)DEFAULT NULL,
-   region VARCHAR(255)DEFAULT NULL,
-   codigoPostal VARCHAR(255)DEFAULT NULL,
-   rut VARCHAR(255)DEFAULT NULL,
-   codigoUsuario VARCHAR(255)DEFAULT NULL,
-   clave VARCHAR(255)DEFAULT NULL,VARCHAR(255)DEFAULT NULL,
-   remuneracion VARCHAR(255)DEFAULT NULL, 
-   credito VARCHAR(255)DEFAULT NULL
-
-   PRIMARY KEY(id)
- );
 
  CREATE TABLE equipos (
    id INT(11)NOT NULL AUTO_INCREMENT,
@@ -125,3 +77,19 @@ MODIFY COLUMN id INT NOT NULL AUTO_INCREMENT PRIMARY KEY;
 ALTER TABLE jugadores DROP PRIMARY KEY;
 
 ALTER TABLE jugadores MODIFY COLUMN id INT NOT NULL AUTO_INCREMENT PRIMARY KEY;
+
+SHOW TABLES;
+SELECT table_name, column_name, data_type 
+FROM information_schema.columns 
+WHERE table_schema = 'ben5ld9pxvoeo3lkstud';
+
+alter table tarjetas
+add column tipo_tarjeta int;
+ALTER TABLE tarjetas
+ADD COLUMN tarjeta_tipo VARCHAR(255)DEFAULT NULL
+
+ALTER TABLE tarjetas
+DROP COLUMN tarjeta
+
+show TABLES
+
